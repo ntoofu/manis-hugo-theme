@@ -10,11 +10,11 @@
 		{{ end }}
 		
 		{{ if .Site.Params.DebugCSS }}
-		<link rel="stylesheet" href="/css/normalize.css"/>
-		<link rel="stylesheet" href="/css/ui.css"/>
-		<link rel="stylesheet" href="/css/syntax.css"/>
+        <link rel="stylesheet" href="{{ "/css/normalize.css" | relURL }}"/>
+        <link rel="stylesheet" href="{{ "/css/ui.css" | relURL }}"/>
+        <link rel="stylesheet" href="{{ "/css/syntax.css" | relURL }}"/>
 		{{ else }}
-		<link rel="stylesheet" href="/css/ui.min.css"/>
+        <link rel="stylesheet" href="{{ "/css/ui.min.css" | relURL }}"/>
 		{{ end }}
 		
 		{{ range .Site.Params.CustomCSS }}

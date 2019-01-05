@@ -2,8 +2,8 @@
 	<ul>
 		{{- if not .IsHome -}}
 		<li>
-			<a href="/">
-				<img class="icon-text" src="/img/prev.svg"/>
+			<a href="{{ "/" | relURL }}">
+                <img class="icon-text" src="{{ "/img/prev.svg" | relURL }}"/>
 			</a>
 		</li>
 		{{- end -}}

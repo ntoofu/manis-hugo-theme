@@ -6,6 +6,7 @@
 	</header>
 	{{ $latestcount := .Site.Params.LatestCount | default 3 }}
 	{{ $postsection := .Site.Params.PostSection | default "post" }}
+	{{ with .Site.GetPage "section" $postsection }}
 	<section>
 		<h4>{{ T "latestPost" }}</h4>
 		<ul class="no-bullet">
@@ -14,6 +15,7 @@
 			{{- end -}}
 		</ul>
 	</section>
+	{{ end }}
 
 	{{ $worksection := .Site.Params.WorkSection | default "work" }}
 	{{ with .Site.GetPage "section" $worksection }}

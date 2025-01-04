@@ -7,4 +7,6 @@
 {{ with .Site.Params.Twitter }}
 <a href="{{.}}"><img class="icon-social" src="{{ "/img/twitter.svg" | relURL }}" alt="Twitter"/></a>
 {{ end }}
-<a href="{{.OutputFormats.Get "RSS".Permalink}}" target="_blank"><img class="icon-social" src="{{ "/img/feed.svg" | relURL }}" alt="Feed"></a>
+{{ with .OutputFormats.Get "rss" -}}
+<a href="{{.Permalink}}" target="_blank"><img class="icon-social" src="{{ "/img/feed.svg" | relURL }}" alt="Feed"></a>
+{{ end }}
